@@ -21,6 +21,7 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://colegio-de-contadores.vercel.app"),
   title: "Régimen de Constructoras 2026 | Colegio de Contadores Valle Dorado",
   description: "Domina el régimen fiscal de constructoras 2026. Curso especializado para contadores que quieren convertirse en expertos del sector construcción. Incluye material, constancia y seguimiento.",
   keywords: ["régimen constructoras", "contadores", "fiscal 2026", "curso contabilidad", "constructoras México", "colegio contadores"],
@@ -31,11 +32,20 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_MX",
     siteName: "Colegio de Contadores Valle Dorado",
+    images: [
+      {
+        url: "/og-image.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Régimen de Constructoras 2026 - Colegio de Contadores Valle Dorado",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Régimen de Constructoras 2026",
     description: "Curso especializado para contadores del sector construcción.",
+    images: ["/og-image.jpeg"],
   },
   robots: {
     index: true,
