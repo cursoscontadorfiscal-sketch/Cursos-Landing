@@ -10,7 +10,7 @@ import type { HeaderProps, NavItem } from './types';
 import styles from './styles.module.css';
 
 const DEFAULT_NAV_ITEMS: readonly NavItem[] = [
-  { label: 'Inicio', href: '#' },
+  { label: 'Inicio', href: '#top' },
   { label: 'El Curso', href: '#curso-destacado' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contacto', href: '#contacto' },
@@ -42,7 +42,7 @@ export const Header: FC<HeaderProps> = ({
       <header className={`${styles.header} ${className}`}>
         <div className={styles.container}>
           {/* Brand / Logo */}
-          <NextLink href="/" className={styles.brand}>
+          <a href="#top" className={styles.brand}>
             <Image
               src="/logo.jpg"
               alt={brandName}
@@ -50,7 +50,7 @@ export const Header: FC<HeaderProps> = ({
               height={48}
               className={styles.brandLogo}
             />
-          </NextLink>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className={styles.nav}>

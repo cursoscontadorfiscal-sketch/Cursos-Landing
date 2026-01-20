@@ -56,7 +56,7 @@ export default async function Home() {
   const faqSectionProps = faqSectionSlice ? mapFaqSectionSlice(faqSectionSlice) : null;
 
   return (
-    <main>
+    <main id="top">
       {/* Pre-Hero Video */}
       <SectionVideo
         youtubeId="oUwGPft8cXk"
