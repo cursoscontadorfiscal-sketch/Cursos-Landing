@@ -1,0 +1,75 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"titlesection": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Nostrud Lorem ad eiusmod ullamco sunt sint enim. Lorem non deserunt cupidatat aliqua ex deserunt cillum veniam sunt nostrud consequat."
+						}
+					}
+				]
+			},
+			"subtitlesection": {
+				"__TYPE__": "FieldContent",
+				"value": "mission",
+				"type": "Text"
+			},
+			"accordionitem": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"accordionitemtitle",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "supper",
+									"type": "Text"
+								}
+							],
+							[
+								"itemlistone",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "bar",
+									"type": "Text"
+								}
+							],
+							[
+								"itemlisttwo",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "board",
+									"type": "Text"
+								}
+							],
+							[
+								"itemlistthree",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "myself",
+									"type": "Text"
+								}
+							],
+							[
+								"itemlistfour",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "lake",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

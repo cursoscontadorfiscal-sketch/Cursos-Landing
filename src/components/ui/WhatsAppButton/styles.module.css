@@ -1,0 +1,93 @@
+.container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1060;
+  text-decoration: none;
+  width: 4rem;
+  height: 4rem;
+}
+
+.tooltip {
+  position: absolute;
+  right: calc(100% + 1rem);
+  top: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: var(--background-primary);
+  color: var(--foreground-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-xl);
+  font-size: var(--font-size-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  box-shadow: var(--shadow-lg);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.container:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(0);
+}
+
+.container:focus-visible {
+  outline: none;
+}
+
+.container:focus-visible .button {
+  outline: 3px solid var(--focus-ring-color);
+  outline-offset: 3px;
+}
+
+.button {
+  width: 4rem;
+  height: 4rem;
+  background: #25D366;
+  border-radius: var(--border-radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4), 0 8px 10px -6px rgba(37, 211, 102, 0.2);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.container:hover .button {
+  transform: scale(1.1);
+  box-shadow: 0 20px 30px -5px rgba(37, 211, 102, 0.5), 0 10px 15px -6px rgba(37, 211, 102, 0.3);
+}
+
+.container:active .button {
+  transform: scale(0.95);
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  fill: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .container {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+
+  .tooltip {
+    display: none;
+  }
+
+  .button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+
+  .icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}

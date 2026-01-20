@@ -1,0 +1,275 @@
+.section {
+  padding: 4rem 0;
+  background-color: var(--background-secondary);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 6rem 0;
+  }
+}
+
+.container {
+  margin: auto;
+  max-width: 64rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: var(--background-primary);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-primary);
+}
+
+@media (min-width: 640px) {
+  .card {
+    border-radius: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .card {
+    grid-template-columns: 2fr 3fr;
+    border-radius: 3rem;
+  }
+}
+
+[data-theme="dark"] .card {
+  box-shadow: none;
+}
+
+/* Info Side */
+.infoSide {
+  background-color: var(--accent-primary);
+  padding: 1.5rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 640px) {
+  .infoSide {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .infoSide {
+    padding: 3rem;
+  }
+}
+
+.infoTitle {
+  font-size: 1.125rem;
+  font-weight: 900;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+  .infoTitle {
+    font-size: 1.25rem;
+    margin: 0 0 1rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .infoTitle {
+    font-size: 1.875rem;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.infoDescription {
+  opacity: 0.8;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  font-size: 0.8125rem;
+}
+
+@media (min-width: 640px) {
+  .infoDescription {
+    margin: 0 0 1.5rem 0;
+    font-size: 0.875rem;
+    line-height: 1.6;
+  }
+}
+
+@media (min-width: 1024px) {
+  .infoDescription {
+    margin: 0 0 2rem 0;
+    font-size: 1rem;
+  }
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.contactIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contactText {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.whatsappNote {
+  padding-top: 1rem;
+  font-size: 0.875rem;
+}
+
+.whatsappLink {
+  font-weight: 700;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.whatsappLink:hover {
+  color: var(--accent-gold);
+}
+
+/* Form Side */
+.formSide {
+  padding: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .formSide {
+    padding: 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formSide {
+    padding: 3rem;
+  }
+}
+
+.formTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--foreground-primary);
+  margin: 0 0 1rem 0;
+}
+
+@media (min-width: 640px) {
+  .formTitle {
+    font-size: 1.25rem;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formTitle {
+    font-size: 1.5rem;
+    margin: 0 0 2rem 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .form {
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form {
+    gap: 1.5rem;
+  }
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+
+  input {
+    margin-top: 0.5rem;
+  }
+}
+
+@media (min-width: 640px) {
+  .formRow {
+    flex-direction: row;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .formRow {
+    gap: 1.5rem;
+  }
+}
+
+.formRow > * {
+  flex: 1;
+}
+
+.submitButton {
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .submitButton {
+    margin-top: 0;
+  }
+}
+
+.formFade {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.formFadeHidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.successFade {
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "id": "hero",
+  "type": "SharedSlice",
+  "name": "Hero",
+  "description": "Hero",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "HeroTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "HeroTitle",
+            "placeholder": "HeroTitle",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "HeroSubtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "HeroSubTitle",
+            "placeholder": "HeroSubTitle",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "HeroBadgeText": {
+          "type": "Text",
+          "config": {
+            "label": "HeroBadgeText",
+            "placeholder": "HeroBadgeText"
+          }
+        },
+        "HeroPrice": {
+          "type": "Text",
+          "config": {
+            "label": "HeroPrice",
+            "placeholder": "HeroPrice"
+          }
+        },
+        "HeroCurrency": {
+          "type": "Text",
+          "config": {
+            "label": "HeroCurrency",
+            "placeholder": "HeroCurrency"
+          }
+        },
+        "HeroCtaText": {
+          "type": "Text",
+          "config": {
+            "label": "HeroCtaText",
+            "placeholder": "HeroCtaText"
+          }
+        },
+        "HeroImg": {
+          "type": "Image",
+          "config": {
+            "label": "HeroImg",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "HeroTestimonialText": {
+          "type": "Text",
+          "config": {
+            "label": "HeroTestimonialText",
+            "placeholder": "HeroTestimonialText"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

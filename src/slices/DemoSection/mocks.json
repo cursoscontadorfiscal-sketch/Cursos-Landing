@@ -1,0 +1,57 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"demosectiontitle": {
+				"__TYPE__": "StructuredTextContent",
+				"value": [
+					{
+						"type": "paragraph",
+						"content": {
+							"text": "Ipsum commodo quis officia pariatur amet do nulla minim."
+						}
+					}
+				]
+			},
+			"demosectionlist": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"demosectionitemtitle",
+								{
+									"__TYPE__": "StructuredTextContent",
+									"value": [
+										{
+											"type": "paragraph",
+											"content": {
+												"text": "Pariatur ut consequat id laboris quis veniam irure exercitation dolore esse esse. Enim reprehenderit tempor ex officia eu anim aliquip magna ipsum excepteur."
+											}
+										}
+									]
+								}
+							],
+							[
+								"demosectionitemdescription",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "real",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"demosectionquote": {
+				"__TYPE__": "FieldContent",
+				"value": "hundred",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

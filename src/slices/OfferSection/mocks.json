@@ -1,0 +1,29 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"offertitle": {
+				"__TYPE__": "FieldContent",
+				"value": "stiff",
+				"type": "Text"
+			},
+			"offersubtitle": {
+				"__TYPE__": "FieldContent",
+				"value": "neighborhood",
+				"type": "Text"
+			},
+			"supportingtext": {
+				"__TYPE__": "FieldContent",
+				"value": "straw",
+				"type": "Text"
+			},
+			"smallsupportingtext": {
+				"__TYPE__": "FieldContent",
+				"value": "birth",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

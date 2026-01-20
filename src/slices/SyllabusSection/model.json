@@ -1,0 +1,79 @@
+{
+  "id": "syllabus_section",
+  "type": "SharedSlice",
+  "name": "SyllabusSection",
+  "description": "SyllabusSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "titlesection": {
+          "type": "StructuredText",
+          "config": {
+            "label": "TitleSection",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "subtitlesection": {
+          "type": "Text",
+          "config": {
+            "label": "SubtitleSection",
+            "placeholder": ""
+          }
+        },
+        "accordionitem": {
+          "type": "Group",
+          "config": {
+            "label": "AccordionItem",
+            "repeat": true,
+            "fields": {
+              "accordionitemtitle": {
+                "type": "Text",
+                "config": {
+                  "label": "AccordionItemTitle",
+                  "placeholder": "title"
+                }
+              },
+              "itemlistone": {
+                "type": "Text",
+                "config": {
+                  "label": "itemlistOne",
+                  "placeholder": ""
+                }
+              },
+              "itemlisttwo": {
+                "type": "Text",
+                "config": {
+                  "label": "itemlistTwo",
+                  "placeholder": ""
+                }
+              },
+              "itemlistthree": {
+                "type": "Text",
+                "config": {
+                  "label": "itemlistThree",
+                  "placeholder": ""
+                }
+              },
+              "itemlistfour": {
+                "type": "Text",
+                "config": {
+                  "label": "itemlistFour",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

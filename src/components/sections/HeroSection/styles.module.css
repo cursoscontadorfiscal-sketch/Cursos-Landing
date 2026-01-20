@@ -1,0 +1,276 @@
+.hero {
+  position: relative;
+  padding: 3rem 0 5rem;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    padding: 6rem 0 8rem;
+  }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.05) 0%, transparent 100%);
+  z-index: 0;
+}
+
+[data-theme="dark"] .hero::before {
+  background: linear-gradient(135deg, rgba(var(--accent-primary-rgb), 0.15) 0%, transparent 100%);
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 0 2.5rem;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+.content {
+  order: 1;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    order: 1;
+  }
+}
+
+.badgeWrapper {
+  margin-bottom: 1.5rem;
+}
+
+.title {
+  margin-bottom: 1.5rem;
+}
+
+.title h1 {
+  font-family: var(--font-display);
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 900;
+  color: var(--foreground-primary);
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .title h1 {
+    font-size: 3.5rem;
+  }
+}
+
+/* Highlighted text (bold from Prismic **text**) */
+.highlight {
+  color: var(--accent-primary);
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--foreground-secondary);
+  max-width: 36rem;
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 1024px) {
+  .subtitle {
+    font-size: 1.25rem;
+  }
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.priceBox {
+  background: var(--background-primary);
+  padding: 1rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+[data-theme="dark"] .priceBox {
+  background: var(--background-tertiary);
+}
+
+.priceLabel {
+  display: block;
+  color: var(--foreground-tertiary);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.priceValue {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.price {
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: var(--accent-primary);
+}
+
+.currency {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--foreground-tertiary);
+  text-transform: uppercase;
+}
+
+.ctaButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4rem;
+  padding: 0 2.5rem;
+  background: var(--accent-primary);
+  color: white;
+  border-radius: 1rem;
+  font-weight: 900;
+  font-size: 1.25rem;
+  box-shadow: 0 10px 25px -5px rgba(var(--accent-primary-rgb), 0.3);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.ctaButton:hover {
+  transform: translateY(-4px);
+}
+
+.ctaButton:active {
+  transform: translateY(0);
+}
+
+/* Image wrapper - CardMedia handles glow internally */
+.imageWrapper {
+  order: 2;
+}
+
+@media (min-width: 1024px) {
+  .imageWrapper {
+    order: 2;
+  }
+}
+
+/* ===========================================
+   Testimonial - Desktop (inside image with glass)
+   =========================================== */
+.testimonialDesktop {
+  display: none;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  padding: 1.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+@media (min-width: 768px) {
+  .testimonialDesktop {
+    display: block;
+  }
+}
+
+.testimonialDesktop .testimonialLabel {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.testimonialDesktop .testimonialText {
+  color: white;
+}
+
+/* ===========================================
+   Testimonial - Mobile (outside image as card)
+   =========================================== */
+.testimonialMobile {
+  display: block;
+  margin-top: 1.5rem;
+  background: var(--background-secondary);
+  padding: 1.25rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border-primary);
+}
+
+@media (min-width: 768px) {
+  .testimonialMobile {
+    display: none;
+  }
+}
+
+.testimonialMobile .testimonialLabel {
+  color: var(--foreground-tertiary);
+}
+
+.testimonialMobile .testimonialText {
+  color: var(--foreground-primary);
+}
+
+/* ===========================================
+   Testimonial shared styles
+   =========================================== */
+.testimonialHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.stars {
+  display: flex;
+  color: var(--accent-gold);
+}
+
+.testimonialLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.testimonialText {
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .testimonialText {
+    font-size: 1.125rem;
+  }
+}

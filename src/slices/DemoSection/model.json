@@ -1,0 +1,60 @@
+{
+  "id": "demo_section",
+  "type": "SharedSlice",
+  "name": "DemoSection",
+  "description": "DemoSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "demosectiontitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "DemoSectionTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "demosectionlist": {
+          "type": "Group",
+          "config": {
+            "label": "DemosectionList",
+            "repeat": true,
+            "fields": {
+              "demosectionitemtitle": {
+                "type": "StructuredText",
+                "config": {
+                  "label": "DemoSectionItemTitle",
+                  "placeholder": "",
+                  "allowTargetBlank": true,
+                  "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                }
+              },
+              "demosectionitemdescription": {
+                "type": "Text",
+                "config": {
+                  "label": "DemoSectionItemDescription",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "demosectionquote": {
+          "type": "Text",
+          "config": {
+            "label": "DemoSectionQuote",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

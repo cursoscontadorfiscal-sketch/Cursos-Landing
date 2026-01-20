@@ -1,0 +1,62 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "cast",
+				"type": "Text"
+			},
+			"badgetext": {
+				"__TYPE__": "FieldContent",
+				"value": "bar",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "appearance",
+				"type": "Text"
+			},
+			"oldprice": {
+				"__TYPE__": "FieldContent",
+				"value": "sit",
+				"type": "Text"
+			},
+			"price": {
+				"__TYPE__": "FieldContent",
+				"value": "expect",
+				"type": "Text"
+			},
+			"currency": {
+				"__TYPE__": "FieldContent",
+				"value": "meet",
+				"type": "Text"
+			},
+			"benefitlist": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"benefitlistitem",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "where",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			},
+			"supportingtext": {
+				"__TYPE__": "FieldContent",
+				"value": "rather",
+				"type": "Text"
+			}
+		},
+		"items": []
+	}
+]

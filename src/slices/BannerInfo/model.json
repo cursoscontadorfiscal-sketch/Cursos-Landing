@@ -1,0 +1,58 @@
+{
+  "id": "banner_info",
+  "type": "SharedSlice",
+  "name": "BannerInfo",
+  "description": "BannerInfo",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "bannerinfotitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "BannerInfoTitle",
+            "placeholder": "BannerInfoTitle",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "bannersubtitle": {
+          "type": "Text",
+          "config": {
+            "label": "BannerSubtitle",
+            "placeholder": "BannerSubtitle"
+          }
+        },
+        "lista": {
+          "type": "Group",
+          "config": {
+            "label": "BannerInfoList",
+            "repeat": true,
+            "fields": {
+              "itemlist": {
+                "type": "Text",
+                "config": {
+                  "label": "ItemList",
+                  "placeholder": "BannerItemList"
+                }
+              }
+            }
+          }
+        },
+        "supportingtext": {
+          "type": "Text",
+          "config": {
+            "label": "supportingText",
+            "placeholder": "supporting text"
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

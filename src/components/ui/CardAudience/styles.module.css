@@ -1,0 +1,72 @@
+.card {
+  padding: 2rem;
+  border-radius: 2rem;
+  border-width: 1px;
+  border-style: solid;
+}
+
+/* Variant: Positive (green) */
+.positive {
+  background-color: var(--audience-positive-bg);
+  border-color: var(--audience-positive-border);
+}
+
+.positive .title {
+  color: var(--audience-positive-title);
+}
+
+.positive .itemIcon {
+  color: var(--audience-positive-icon);
+}
+
+/* Variant: Negative (red) */
+.negative {
+  background-color: var(--audience-negative-bg);
+  border-color: var(--audience-negative-border);
+}
+
+.negative .title {
+  color: var(--audience-negative-title);
+}
+
+.negative .itemIcon {
+  color: var(--audience-negative-icon);
+}
+
+/* Title */
+.title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.titleIcon {
+  flex-shrink: 0;
+}
+
+/* Items list */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.itemIcon {
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.itemText {
+  color: var(--foreground-secondary);
+  line-height: 1.5;
+}

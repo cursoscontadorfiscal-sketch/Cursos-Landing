@@ -1,66 +1,88 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { createClient } from "@/prismicio";
 
-export default function Home() {
+// ISR: cachea la página completa por 2 horas
+export const revalidate = 7200;
+import { SectionVideo } from '@/components/sections/SectionVideo';
+import { HeroSection } from "@/components/sections/HeroSection";
+import { BannerSection } from "@/components/sections/BannerSection";
+import { AudienceSection } from "@/components/sections/AudienceSection";
+import { DemoSection } from "@/components/sections/DemoSection";
+import { SyllabusSection } from "@/components/sections/SyllabusSection";
+import { OfferSection } from "@/components/sections/OfferSection";
+import { SpecialtySection } from "@/components/sections/SpecialtySection";
+import { CardOfferSection } from "@/components/sections/CardOfferSection";
+import { FaqSection } from "@/components/sections/FaqSection";
+import { ContactSection } from "@/components/sections/ContactSection";
+import {
+  getHeroSlice,
+  mapHeroSlice,
+  getBannerInfoSlice,
+  mapBannerInfoSlice,
+  getAudienceFilterSlice,
+  mapAudienceFilterSlice,
+  getDemoSectionSlice,
+  mapDemoSectionSlice,
+  getSyllabusSectionSlice,
+  mapSyllabusSectionSlice,
+  getOfferSectionSlice,
+  mapOfferSectionSlice,
+  getCardOfferSectionSlice,
+  mapCardOfferSectionSlice,
+  getFaqSectionSlice,
+  mapFaqSectionSlice,
+} from "@/lib/mappers";
+
+
+export default async function Home() {
+  const client = createClient();
+  const page = await client.getSingle("homepage");
+
+  const heroSlice = getHeroSlice(page.data.slices);
+  const bannerSlice = getBannerInfoSlice(page.data.slices);
+  const audienceFilterslice = getAudienceFilterSlice(page.data.slices);
+  const demoSectionSlice = getDemoSectionSlice(page.data.slices);
+  const syllabusSlice = getSyllabusSectionSlice(page.data.slices);
+  const offerSectionSlice = getOfferSectionSlice(page.data.slices);
+  const cardOfferSectionSlice = getCardOfferSectionSlice(page.data.slices);
+  const faqSectionSlice = getFaqSectionSlice(page.data.slices);
+
+  const heroProps = heroSlice ? mapHeroSlice(heroSlice) : null;
+  const bannerProps = bannerSlice ? mapBannerInfoSlice(bannerSlice) : null;
+  const audienceFilterProps = audienceFilterslice ? mapAudienceFilterSlice(audienceFilterslice) : null;
+  const demoSectionProps = demoSectionSlice ? mapDemoSectionSlice(demoSectionSlice) : null;
+  const syllabusProps = syllabusSlice ? mapSyllabusSectionSlice(syllabusSlice) : null;
+  const offerSectionProps = offerSectionSlice ? mapOfferSectionSlice(offerSectionSlice) : null;
+  const cardOfferSectionProps = cardOfferSectionSlice ? mapCardOfferSectionSlice(cardOfferSectionSlice) : null;
+  const faqSectionProps = faqSectionSlice ? mapFaqSectionSlice(faqSectionSlice) : null;
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.tsx file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+    <main>
+      {/* Pre-Hero Video */}
+      <SectionVideo
+        youtubeId="oUwGPft8cXk"
+        thumbnailSrc="/hero-thumbnail.jpg"
+        objectFit="cover"
+      />
+
+      {heroProps && <HeroSection {...heroProps} image="/testi.png" />}
+
+      {bannerProps && <BannerSection {...bannerProps} />}
+
+      {audienceFilterProps && <AudienceSection {...audienceFilterProps} />}
+
+      {demoSectionProps && <DemoSection {...demoSectionProps} />}
+
+      {syllabusProps && <SyllabusSection {...syllabusProps} />}
+
+      {offerSectionProps && <OfferSection {...offerSectionProps} />}
+
+      <SpecialtySection />
+
+      {cardOfferSectionProps && <CardOfferSection {...cardOfferSectionProps} />}
+
+      {faqSectionProps && <FaqSection {...faqSectionProps} />}
+
+      <ContactSection />
+    </main>
   );
 }

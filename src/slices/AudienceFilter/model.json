@@ -1,0 +1,85 @@
+{
+  "id": "audience_filter",
+  "type": "SharedSlice",
+  "name": "AudienceFilter",
+  "description": "AudienceFilter",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "audiencefiltertitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "AudienceFilterTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "audiencefiltertext": {
+          "type": "Text",
+          "config": {
+            "label": "AudienceFilterText",
+            "placeholder": ""
+          }
+        },
+        "audiencepositivelisttitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "AudiencePositiveListTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "audiencenegativelisttitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "AudienceNegativeListTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "audiencefilterpositivelist": {
+          "type": "Group",
+          "config": {
+            "label": "AudienceFilterpositiveList",
+            "repeat": true,
+            "fields": {
+              "audiencefilteritemlist": {
+                "type": "Text",
+                "config": {
+                  "label": "AudienceFilterItemList",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "audiencefilternegativelist": {
+          "type": "Group",
+          "config": {
+            "label": "AudienceFilterNegativeList",
+            "repeat": true,
+            "fields": {
+              "audiencefilteritemlist": {
+                "type": "Text",
+                "config": {
+                  "label": "AudienceFilterItemList",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

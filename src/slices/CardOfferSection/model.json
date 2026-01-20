@@ -1,0 +1,84 @@
+{
+  "id": "card_offer_section",
+  "type": "SharedSlice",
+  "name": "CardOfferSection",
+  "description": "CardOfferSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "title": {
+          "type": "Text",
+          "config": {
+            "label": "title",
+            "placeholder": ""
+          }
+        },
+        "badgetext": {
+          "type": "Text",
+          "config": {
+            "label": "badgeText",
+            "placeholder": ""
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
+            "placeholder": ""
+          }
+        },
+        "oldprice": {
+          "type": "Text",
+          "config": {
+            "label": "oldPrice",
+            "placeholder": ""
+          }
+        },
+        "price": {
+          "type": "Text",
+          "config": {
+            "label": "price",
+            "placeholder": ""
+          }
+        },
+        "currency": {
+          "type": "Text",
+          "config": {
+            "label": "currency",
+            "placeholder": ""
+          }
+        },
+        "benefitlist": {
+          "type": "Group",
+          "config": {
+            "label": "benefitList",
+            "repeat": true,
+            "fields": {
+              "benefitlistitem": {
+                "type": "Text",
+                "config": {
+                  "label": "benefitListItem",
+                  "placeholder": ""
+                }
+              }
+            }
+          }
+        },
+        "supportingtext": {
+          "type": "Text",
+          "config": {
+            "label": "supportingText",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

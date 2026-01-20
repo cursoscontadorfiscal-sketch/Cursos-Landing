@@ -1,0 +1,53 @@
+[
+	{
+		"__TYPE__": "SharedSliceContent",
+		"variation": "default",
+		"primary": {
+			"title": {
+				"__TYPE__": "FieldContent",
+				"value": "when",
+				"type": "Text"
+			},
+			"description": {
+				"__TYPE__": "FieldContent",
+				"value": "imagine",
+				"type": "Text"
+			},
+			"faqaccordion": {
+				"__TYPE__": "GroupContentType",
+				"value": [
+					{
+						"__TYPE__": "GroupItemContent",
+						"value": [
+							[
+								"itemone",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "war",
+									"type": "Text"
+								}
+							],
+							[
+								"itemtwo",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "gold",
+									"type": "Text"
+								}
+							],
+							[
+								"titleaccordion",
+								{
+									"__TYPE__": "FieldContent",
+									"value": "equator",
+									"type": "Text"
+								}
+							]
+						]
+					}
+				]
+			}
+		},
+		"items": []
+	}
+]

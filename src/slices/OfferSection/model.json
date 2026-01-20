@@ -1,0 +1,47 @@
+{
+  "id": "offer_section",
+  "type": "SharedSlice",
+  "name": "OfferSection",
+  "description": "OfferSection",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "initial",
+      "description": "Default",
+      "imageUrl": "",
+      "primary": {
+        "offertitle": {
+          "type": "Text",
+          "config": {
+            "label": "OfferTitle",
+            "placeholder": ""
+          }
+        },
+        "offersubtitle": {
+          "type": "Text",
+          "config": {
+            "label": "OfferSubtitle",
+            "placeholder": ""
+          }
+        },
+        "supportingtext": {
+          "type": "Text",
+          "config": {
+            "label": "supportingText",
+            "placeholder": ""
+          }
+        },
+        "smallsupportingtext": {
+          "type": "Text",
+          "config": {
+            "label": "SmallSupportingText",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {}
+    }
+  ]
+}

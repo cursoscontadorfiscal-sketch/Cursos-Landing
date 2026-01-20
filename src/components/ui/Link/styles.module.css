@@ -1,0 +1,122 @@
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--focus-ring-color);
+  outline-offset: 2px;
+  border-radius: var(--border-radius-sm);
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.text {
+  display: inline-block;
+}
+
+.sm {
+  font-size: var(--font-size-xs);
+  gap: var(--spacing-xs);
+}
+
+.sm .icon {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.md {
+  font-size: var(--font-size-sm);
+  gap: var(--spacing-xs);
+}
+
+.md .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.lg {
+  font-size: var(--font-size-base);
+  gap: var(--spacing-sm);
+}
+
+.lg .icon {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.nav {
+  color: var(--foreground-primary);
+  font-weight: 600;
+}
+
+.nav:hover {
+  color: var(--accent-primary);
+}
+
+.nav:active {
+  color: var(--accent-secondary);
+}
+
+.inline {
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+.inline:hover {
+  text-decoration: underline;
+  color: var(--accent-secondary);
+}
+
+.inline:active {
+  color: var(--accent-hover);
+}
+
+.subtle {
+  color: var(--foreground-secondary);
+  font-weight: 500;
+}
+
+.subtle:hover {
+  color: var(--foreground-primary);
+}
+
+.subtle:active {
+  color: var(--accent-primary);
+}
+
+.primary {
+  color: var(--accent-primary);
+  font-weight: 700;
+}
+
+.primary:hover {
+  color: var(--accent-secondary);
+  text-decoration: underline;
+}
+
+.primary:active {
+  color: var(--accent-hover);
+}
+
+.secondary {
+  color: var(--foreground-secondary);
+  font-weight: 600;
+}
+
+.secondary:hover {
+  color: var(--accent-primary);
+}
+
+.secondary:active {
+  color: var(--accent-secondary);
+}
