@@ -1,13 +1,13 @@
 import { createClient } from "@/prismicio";
 
 // ISR: cachea la página completa por 2 horas
-export const revalidate = 7200;
-import { SectionVideo } from '@/components/sections/SectionVideo';
+// export const revalidate = 7200;
+//import { SectionVideo } from '@/components/sections/SectionVideo';
 import { HeroSection } from "@/components/sections/HeroSection";
 import { BannerSection } from "@/components/sections/BannerSection";
 import { AudienceSection } from "@/components/sections/AudienceSection";
 import { DemoSection } from "@/components/sections/DemoSection";
-import { SyllabusSection } from "@/components/sections/SyllabusSection";
+//import { SyllabusSection } from "@/components/sections/SyllabusSection";
 import { OfferSection } from "@/components/sections/OfferSection";
 import { SpecialtySection } from "@/components/sections/SpecialtySection";
 import { CardOfferSection } from "@/components/sections/CardOfferSection";
@@ -50,21 +50,22 @@ export default async function Home() {
   const bannerProps = bannerSlice ? mapBannerInfoSlice(bannerSlice) : null;
   const audienceFilterProps = audienceFilterslice ? mapAudienceFilterSlice(audienceFilterslice) : null;
   const demoSectionProps = demoSectionSlice ? mapDemoSectionSlice(demoSectionSlice) : null;
-  const syllabusProps = syllabusSlice ? mapSyllabusSectionSlice(syllabusSlice) : null;
+//  const syllabusProps = syllabusSlice ? mapSyllabusSectionSlice(syllabusSlice) : null;
   const offerSectionProps = offerSectionSlice ? mapOfferSectionSlice(offerSectionSlice) : null;
   const cardOfferSectionProps = cardOfferSectionSlice ? mapCardOfferSectionSlice(cardOfferSectionSlice) : null;
   const faqSectionProps = faqSectionSlice ? mapFaqSectionSlice(faqSectionSlice) : null;
 
   return (
     <main id="top">
-      {/* Pre-Hero Video */}
+      {/* Pre-Hero Video 
       <SectionVideo
         youtubeId="oUwGPft8cXk"
         thumbnailSrc="/hero-thumbnail.jpg"
         objectFit="cover"
       />
+      */}
 
-      {heroProps && <HeroSection {...heroProps} image="/testi.png" />}
+      {heroProps && <HeroSection {...heroProps} image="/two.jpg" />}
 
       {bannerProps && <BannerSection {...bannerProps} />}
 
@@ -72,7 +73,7 @@ export default async function Home() {
 
       {demoSectionProps && <DemoSection {...demoSectionProps} />}
 
-      {syllabusProps && <SyllabusSection {...syllabusProps} />}
+      {/* {syllabusProps && <SyllabusSection {...syllabusProps} />} */}
 
       {offerSectionProps && <OfferSection {...offerSectionProps} />}
 

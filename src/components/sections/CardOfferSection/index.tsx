@@ -16,12 +16,12 @@ export const CardOfferSection: FC<CardOfferSectionProps> = ({
   currency,
   benefits,
   supportingText,
-  ctaText = "Comprar ahora",
+  ctaText = "Acceder ahora",
   className = "",
 }) => {
   const handleCtaClick = () => {
     window.open(
-      "https://pay.hotmart.com/V103966791R",
+      "https://pay.hotmart.com/L103962942X?off=9fzpxux4&checkoutMode=6&bid=1769812725142",
       "_blank",
       "noopener,noreferrer"
     );

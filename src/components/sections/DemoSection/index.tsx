@@ -2,9 +2,17 @@
 
 import { FC, useState } from "react";
 import { PrismicRichText } from "@prismicio/react";
-import { Video, Users, Calendar, Play } from "lucide-react";
+import { Video, Users, Calendar, X } from "lucide-react";
+// import { Play } from "lucide-react"; // COMMENTED: Not using video for now
+import { Tooltip } from "@/components/ui/Tooltip";
 import type { DemoSectionProps } from "./types";
 import styles from "./styles.module.css";
+
+// Calendar images slider data
+const CALENDAR_SLIDES = [
+  { id: "lunes", label: "Lunes", image: "/lun.jpg" },
+  { id: "miercoles", label: "Miércoles", image: "/mie.jpg" }, // TODO: Replace with calendarTwo.jpg
+] as const;
 
 // Force h2 for semantic hierarchy
 const titleComponents = {
@@ -19,10 +27,16 @@ export const DemoSection: FC<DemoSectionProps> = ({
   quote,
   className = "",
 }) => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
-  const iframeSrc =
-    "https://www.youtube.com/embed/oUwGPft8cXk?playsinline=1&rel=0";
+  const openLightbox = () => setIsLightboxOpen(true);
+  const closeLightbox = () => setIsLightboxOpen(false);
+
+  /* COMMENTED: Video state - keeping for future implementation
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const iframeSrc = "https://www.youtube.com/embed/oUwGPft8cXk?playsinline=1&rel=0";
+  */
 
   return (
     <section className={`${styles.section} ${className}`}>
@@ -65,7 +79,80 @@ export const DemoSection: FC<DemoSectionProps> = ({
             )}
           </div>
 
-          {/* Video preview side */}
+          {/* Calendar slider */}
+          <div className={styles.videoSide}>
+            <Tooltip content="Ampliar imagen" position="top">
+              <button
+                type="button"
+                className={styles.calendarSlider}
+                onClick={openLightbox}
+                aria-label="Ampliar imagen del calendario"
+              >
+                <img
+                  src={CALENDAR_SLIDES[activeSlide].image}
+                  alt={`Calendario ${CALENDAR_SLIDES[activeSlide].label}`}
+                  className={styles.calendarImage}
+                />
+              </button>
+            </Tooltip>
+
+            <div className={styles.sliderDots}>
+              {CALENDAR_SLIDES.map((slide, index) => (
+                <button
+                  key={slide.id}
+                  type="button"
+                  className={`${styles.sliderDot} ${activeSlide === index ? styles.sliderDotActive : ""}`}
+                  onClick={() => setActiveSlide(index)}
+                >
+                  {slide.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          {/* Lightbox Modal */}
+          {isLightboxOpen && (
+            <div
+              className={styles.lightboxOverlay}
+              onClick={closeLightbox}
+              role="dialog"
+              aria-modal="true"
+              aria-label="Imagen ampliada"
+            >
+              <div
+                className={styles.lightboxContent}
+                onClick={(e) => e.stopPropagation()}
+              >
+                <button
+                  type="button"
+                  className={styles.lightboxClose}
+                  onClick={closeLightbox}
+                  aria-label="Cerrar imagen"
+                >
+                  <X size={24} />
+                </button>
+                <img
+                  src={CALENDAR_SLIDES[activeSlide].image}
+                  alt={`Calendario ${CALENDAR_SLIDES[activeSlide].label}`}
+                  className={styles.lightboxImage}
+                />
+                <div className={styles.lightboxDots}>
+                  {CALENDAR_SLIDES.map((slide, index) => (
+                    <button
+                      key={slide.id}
+                      type="button"
+                      className={`${styles.sliderDot} ${activeSlide === index ? styles.sliderDotActive : ""}`}
+                      onClick={() => setActiveSlide(index)}
+                    >
+                      {slide.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* COMMENTED: Video preview side - keeping for future implementation
           <div className={styles.videoSide}>
             <button
               type="button"
@@ -108,6 +195,7 @@ export const DemoSection: FC<DemoSectionProps> = ({
               Demo de la plataforma
             </div>
           </div>
+          */}
         </div>
       </div>
     </section>
