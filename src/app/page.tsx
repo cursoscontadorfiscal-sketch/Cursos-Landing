@@ -1,7 +1,7 @@
 import { createClient } from "@/prismicio";
 
 // ISR: cachea la página completa por 2 horas
-// export const revalidate = 7200;
+export const revalidate = 7200;
 //import { SectionVideo } from '@/components/sections/SectionVideo';
 import { HeroSection } from "@/components/sections/HeroSection";
 import { BannerSection } from "@/components/sections/BannerSection";
