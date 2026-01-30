@@ -3,25 +3,23 @@ import { Package, CreditCard, Check, ArrowRight } from "lucide-react";
 import styles from "./styles.module.css";
 
 const SERVICES = [
-  { label: "Alta y diagnóstico fiscal", price: "$3,000 – $7,000" },
-  { label: "Análisis PF vs PM", price: "$2,500 – $6,000" },
-  { label: "Revisión de ingresos y momentos de acumulación", price: "$3,000 – $8,000" },
-  { label: "Planeación de deducciones autorizadas", price: "$3,500 – $9,000" },
-  { label: "Soporte de materialidad y razón de negocios", price: "$4,000 – $12,000" },
-  { label: "Deducción por estimativas e IVA en construcción", price: "$5,000 – $15,000+" },
+  { label: "Diagnóstico y estructuración fiscal para PYMES", price: "$3,000 – $8,000 MXN" },
+  { label: "Optimización y revisión de CFDI 4.0", price: "$2,500 – $6,000 MXN" },
+  { label: "Acompañamiento en Declaración Anual (Personas Morales)", price: "$5,000 – $15,000 MXN" },
+  { label: "Definición de nicho + propuesta de valor del despacho", price: "$4,000 – $12,000 MXN" },
+  { label: "Diseño de oferta de servicios contables", price: "$3,000 – $10,000 MXN" },
+  { label: "Asesoría estratégica mensual para clientes recurrentes", price: "$2,500 – $7,000 MXN" },
 ];
 
 const INCLUDES = [
   "Material de trabajo",
   "Constancia",
   "Seguimiento de dudas",
-  "4h contenido grabado",
+  "Contenido grabado",
 ];
 
 const PAYMENT_METHODS = [
-  "Transferencia",
-  "Depósito (OXXO/SPIN)",
-  "Tarjeta de crédito (Mercado Pago)",
+  "Suscripción mensual mediante la plataforma de Hotmart"
 ];
 
 interface SpecialtySectionProps {
@@ -35,10 +33,10 @@ export const SpecialtySection: FC<SpecialtySectionProps> = ({ className = "" }) 
         {/* Header */}
         <div className={styles.header}>
           <h2 className={styles.title}>
-            ¡Esto no es solo un Taller!
+            ¡Esto no es una Membresía común!
             <br />
-            Es una <span className={styles.highlight}>especialidad fiscal</span> que puedes convertir en{" "}
-            <span className={styles.highlightGreen}>servicios bien pagados</span> durante todo el 2026.
+            Es una <span className={styles.highlight}>Formación</span> aplicada que eleva tu{" "}
+            <span className={styles.highlightGreen}>valor</span> profesional.
           </h2>
           <p className={styles.subtitle}>
             Domina estos temas y capitaliza servicios de alto valor:
@@ -58,13 +56,13 @@ export const SpecialtySection: FC<SpecialtySectionProps> = ({ className = "" }) 
         {/* Highlight Banner */}
         <div className={styles.highlightBanner}>
           <p className={styles.highlightText}>
-            ¿Sabías que puedes ganar de $50,000 a $136,000 MXN con un solo cliente constructor?
+            ¿Sabías que mejores servicios generan mejores honorarios?
           </p>
         </div>
 
         {/* Repeat Text */}
         <p className={styles.repeatText}>
-          Y esto lo puedes repetir con 3, 5, 10 o más constructoras durante el año fiscal
+          A través de esta membresía, tendras todo lo necesario para comenzar a trabajar.
         </p>
 
         {/* Info Cards */}

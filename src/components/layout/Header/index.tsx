@@ -11,7 +11,7 @@ import styles from './styles.module.css';
 
 const DEFAULT_NAV_ITEMS: readonly NavItem[] = [
   { label: 'Inicio', href: '#top' },
-  { label: 'El Curso', href: '#curso-destacado' },
+  { label: 'Membresía', href: '#precio' },
   { label: 'FAQ', href: '#faq' },
   { label: 'Contacto', href: '#contacto' },
 ] as const;

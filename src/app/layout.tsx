@@ -22,13 +22,13 @@ const dmSans = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://colegio-de-contadores.vercel.app"),
-  title: "Régimen de Constructoras 2026 | Colegio de Contadores Valle Dorado",
-  description: "Domina el régimen fiscal de constructoras 2026. Curso especializado para contadores que quieren convertirse en expertos del sector construcción. Incluye material, constancia y seguimiento.",
-  keywords: ["régimen constructoras", "contadores", "fiscal 2026", "curso contabilidad", "constructoras México", "colegio contadores"],
+  title: "Membresía de Crecimiento para Contadores 2026 | Colegio de Contadores Valle Dorado",
+  description: "Sistema mensual de crecimiento para contadores. Clases en vivo, actualización fiscal, comunidad VIP y herramientas para construir un despacho más rentable. Solo $997 MXN/mes.",
+  keywords: ["membresía contadores", "capacitación contable", "actualización fiscal 2026", "crecimiento profesional contadores", "clases contabilidad", "colegio contadores", "despacho contable rentable"],
   authors: [{ name: "Colegio de Contadores Valle Dorado" }],
   openGraph: {
-    title: "Régimen de Constructoras 2026 | Colegio de Contadores Valle Dorado",
-    description: "Domina el régimen fiscal de constructoras 2026. Curso especializado para contadores.",
+    title: "Membresía de Crecimiento para Contadores | Colegio de Contadores Valle Dorado",
+    description: "Sistema mensual de crecimiento: clases en vivo, actualización fiscal, comunidad VIP. Construye un despacho más rentable por $997 MXN/mes.",
     type: "website",
     locale: "es_MX",
     siteName: "Colegio de Contadores Valle Dorado",
@@ -37,14 +37,14 @@ export const metadata: Metadata = {
         url: "/og-image.jpeg",
         width: 1200,
         height: 630,
-        alt: "Régimen de Constructoras 2026 - Colegio de Contadores Valle Dorado",
+        alt: "Membresía de Crecimiento para Contadores - Colegio de Contadores Valle Dorado",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Régimen de Constructoras 2026",
-    description: "Curso especializado para contadores del sector construcción.",
+    title: "Membresía de Crecimiento para Contadores 2026",
+    description: "Sistema mensual: clases en vivo, actualización fiscal y comunidad VIP para contadores.",
     images: ["/og-image.jpeg"],
   },
   robots: {
@@ -52,7 +52,9 @@ export const metadata: Metadata = {
     follow: true,
   },
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
     apple: '/apple-touch-icon.png',
   },
 };

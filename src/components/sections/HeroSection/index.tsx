@@ -1,12 +1,12 @@
 import { FC } from "react";
 import { PrismicRichText } from "@prismicio/react";
-import { Star } from "lucide-react";
+// import { Star } from "lucide-react"; // COMMENTED: Not using testimonial for now
 import { Badge } from "@/components/ui/Badge";
 import { CardMedia } from "@/components/ui/CardMedia";
 import type { HeroSectionProps } from "./types";
 import styles from "./styles.module.css";
 
-const STARS = ["star-1", "star-2", "star-3", "star-4", "star-5"] as const;
+// const STARS = ["star-1", "star-2", "star-3", "star-4", "star-5"] as const; // COMMENTED: Not using testimonial for now
 
 // Custom components for PrismicRichText - force h1 and bold text gets accent color
 const titleComponents = {
@@ -24,7 +24,7 @@ const titleComponents = {
   ),
 };
 
-// Testimonial content component to avoid duplication
+/* COMMENTED: Testimonial content component - keeping for future implementation
 const TestimonialContent: FC<{ text: string; className?: string }> = ({ text, className }) => (
   <div className={className}>
     <div className={styles.testimonialHeader}>
@@ -38,6 +38,7 @@ const TestimonialContent: FC<{ text: string; className?: string }> = ({ text, cl
     <p className={styles.testimonialText}>{text}</p>
   </div>
 );
+*/
 
 export const HeroSection: FC<HeroSectionProps> = ({
   badgeText,
@@ -48,11 +49,11 @@ export const HeroSection: FC<HeroSectionProps> = ({
   ctaText,
   ctaHref = "#precio",
   image,
-  testimonialText,
+  // testimonialText, // COMMENTED: Not using Prismic testimonial for now
   className = "",
 }) => {
   return (
-    <section className={`${styles.hero} ${className}`} id="curso-destacado">
+    <section className={`${styles.hero} ${className}`} id="membresia">
       <div className={styles.container}>
         <div className={styles.grid}>
           {/* Content */}
@@ -74,11 +75,12 @@ export const HeroSection: FC<HeroSectionProps> = ({
             <div className={styles.actions}>
               {price && (
                 <div className={styles.priceBox}>
-                  <span className={styles.priceLabel}>Invierte en tu paz mental</span>
+                  <span className={styles.priceLabel}>Acceso mensual</span>
                   <div className={styles.priceValue}>
                     <span className={styles.price}>${price}</span>
                     {currency && <span className={styles.currency}>{currency}</span>}
                   </div>
+                  <span className={styles.priceLabel}>8 clases en vivo <br/>+ grabaciones <br/> + comunidad VIP</span>
                 </div>
               )}
 
@@ -94,15 +96,17 @@ export const HeroSection: FC<HeroSectionProps> = ({
           <div className={styles.imageWrapper}>
             <CardMedia
               imageSrc={image}
-              imageAlt="Profesional contable"
+              imageAlt="Membresía para contadores"
               aspectRatio="portrait"
               showGlow
               overlay="gradient"
               rounded="3xl"
               showBorder
               hoverScale
-            >
-              {/* Testimonial inside image - Desktop only */}
+            />
+
+            {/* COMMENTED: Testimonial overlay - keeping for future implementation
+            <CardMedia ...>
               {testimonialText && (
                 <TestimonialContent
                   text={testimonialText}
@@ -111,13 +115,13 @@ export const HeroSection: FC<HeroSectionProps> = ({
               )}
             </CardMedia>
 
-            {/* Testimonial outside image - Mobile only */}
             {testimonialText && (
               <TestimonialContent
                 text={testimonialText}
                 className={styles.testimonialMobile}
               />
             )}
+            */}
           </div>
         </div>
       </div>

@@ -16,7 +16,7 @@ export const OfferSection: FC<OfferSectionProps> = ({
 }) => {
   const handleCtaClick = () => {
     window.open(
-      "https://pay.hotmart.com/V103966791R",
+      "https://pay.hotmart.com/L103962942X?off=9fzpxux4&checkoutMode=6&bid=1769812725142",
       "_blank",
       "noopener,noreferrer"
     );
@@ -68,6 +68,7 @@ export const OfferSection: FC<OfferSectionProps> = ({
                 {ctaText}
               </button>
               <p className={styles.smallText}>{smallSupportingText}</p>
+              <p className={styles.smallText} style={{ margin: '.5rem 0' }}>Colegio de Contadores Valle Dorado</p>
             </div>
           </div>
         </div>

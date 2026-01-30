@@ -91,9 +91,9 @@
 /* Supporting text */
 .supportingText {
   text-align: center;
-  color: var(--accent-gold);
   font-weight: 900;
-  margin-top: 2.5rem;
-  font-size: 1.25rem;
+  margin-top: 2.7rem;
+  font-size: 1.55rem;
   letter-spacing: 0.05em;
+  color: rgba(255, 255, 255, 0.9);
 }
