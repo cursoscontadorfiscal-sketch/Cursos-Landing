@@ -50,7 +50,7 @@
 
 /* Info Side */
 .infoSide {
-  background-color: var(--accent-primary);
+  background: linear-gradient(135deg, #080f1e 0%, #0d1f3c 50%, #080f1e 100%);
   padding: 1.5rem;
   color: white;
   display: flex;

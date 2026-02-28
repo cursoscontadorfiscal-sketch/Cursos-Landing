@@ -23,6 +23,27 @@
   background: var(--background-tertiary);
 }
 
+.headerOpen {
+  background: #3b82f6;
+  transition: background-color 0.2s ease;
+}
+
+.headerOpen:hover {
+  background: #2563eb;
+}
+
+.headerOpen .title {
+  color: white;
+}
+
+.headerOpen .subtitle {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.headerOpen .icon {
+  color: white;
+}
+
 .header:focus-visible {
   outline: 2px solid var(--focus-ring-color);
   outline-offset: -2px;

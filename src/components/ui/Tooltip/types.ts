@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { CSSProperties, ReactNode } from 'react';
 
 export type TooltipPosition = 'top' | 'bottom' | 'left' | 'right';
 
@@ -8,6 +8,7 @@ export interface TooltipProps {
   position?: TooltipPosition;
   delay?: number;
   className?: string;
+  style?: CSSProperties;
   disabled?: boolean;
   fullSize?: boolean;
 }
