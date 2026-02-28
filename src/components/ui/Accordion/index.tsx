@@ -68,7 +68,7 @@ export function Accordion({
     <div className={`${styles.accordion} ${className}`}>
       <button
         type="button"
-        className={styles.header}
+        className={`${styles.header} ${isOpen ? styles.headerOpen : ""}`}
         onClick={handleToggle}
         onKeyDown={handleKeyDown}
         aria-expanded={isOpen}

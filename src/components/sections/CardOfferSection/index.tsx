@@ -1,11 +1,9 @@
 'use client';
 
 import { FC } from "react";
-import { ShieldCheck, Shield, HeadsetIcon } from "lucide-react";
+import { Check } from "lucide-react";
 import type { CardOfferSectionProps } from "./types";
 import styles from "./styles.module.css";
-
-const BENEFIT_ICONS = [ShieldCheck, Shield, HeadsetIcon];
 
 export const CardOfferSection: FC<CardOfferSectionProps> = ({
   title,
@@ -21,7 +19,7 @@ export const CardOfferSection: FC<CardOfferSectionProps> = ({
 }) => {
   const handleCtaClick = () => {
     window.open(
-      "https://pay.hotmart.com/L103962942X?off=9fzpxux4&checkoutMode=6&bid=1769812725142",
+      "https://pay.hotmart.com/L103962942X?off=g1xs9jwb&bid=1772239448007",
       "_blank",
       "noopener,noreferrer"
     );
@@ -29,9 +27,15 @@ export const CardOfferSection: FC<CardOfferSectionProps> = ({
 
   return (
     <section id="precio" className={`${styles.section} ${className}`}>
-      <div className={styles.backgroundGradient} />
+      <div className={styles.sectionDots} aria-hidden="true" />
+      <div className={styles.sectionGlow} aria-hidden="true" />
+
       <div className={styles.container}>
         <div className={styles.card}>
+
+          {/* Top accent gradient bar */}
+          <div className={styles.accentBar} aria-hidden="true" />
+
           {/* Badge */}
           <span className={styles.badge}>{badgeText}</span>
 
@@ -45,27 +49,31 @@ export const CardOfferSection: FC<CardOfferSectionProps> = ({
 
           {/* Pricing */}
           <div className={styles.pricing}>
-            <span className={styles.oldPrice}>{oldPrice}</span>
+            {oldPrice && (
+              <div className={styles.oldPriceWrapper}>
+                <span className={styles.oldPriceLabel}>Antes</span>
+                <span className={styles.oldPrice}>{oldPrice}</span>
+              </div>
+            )}
             <div className={styles.priceWrapper}>
               <span className={styles.price}>{price}</span>
-              <span className={styles.currency}>{currency}</span>
+              {currency && <span className={styles.currency}>{currency}</span>}
             </div>
           </div>
 
           {/* Benefits */}
-          <div className={styles.benefits}>
-            {benefits.map((benefit, index) => {
-              const Icon = BENEFIT_ICONS[index % BENEFIT_ICONS.length];
-              return (
-                <div key={benefit.text} className={styles.benefitItem}>
-                  <Icon size={20} className={styles.benefitIcon} />
-                  {benefit.text}
-                </div>
-              );
-            })}
-          </div>
+          <ul className={styles.benefits}>
+            {benefits.map((benefit) => (
+              <li key={benefit.text} className={styles.benefitItem}>
+                <span className={styles.checkIcon}>
+                  <Check size={11} strokeWidth={3} />
+                </span>
+                {benefit.text}
+              </li>
+            ))}
+          </ul>
 
-          {/* CTA Button */}
+          {/* CTA */}
           <button
             type="button"
             className={styles.ctaButton}
@@ -76,6 +84,7 @@ export const CardOfferSection: FC<CardOfferSectionProps> = ({
 
           {/* Supporting Text */}
           <p className={styles.supportingText}>{supportingText}</p>
+
         </div>
       </div>
     </section>

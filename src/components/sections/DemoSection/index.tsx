@@ -10,8 +10,8 @@ import styles from "./styles.module.css";
 
 // Calendar images slider data
 const CALENDAR_SLIDES = [
-  { id: "lunes", label: "Lunes", image: "/lun.jpg" },
-  { id: "miercoles", label: "Miércoles", image: "/mie.jpg" }, // TODO: Replace with calendarTwo.jpg
+  { id: "lunes", label: "Lunes", image: "/lunesMarzo.jpeg" },
+  { id: "miercoles", label: "Miércoles", image: "/miercolesMarzo.jpeg" },
 ] as const;
 
 // Force h2 for semantic hierarchy
@@ -81,7 +81,7 @@ export const DemoSection: FC<DemoSectionProps> = ({
 
           {/* Calendar slider */}
           <div className={styles.videoSide}>
-            <Tooltip content="Ampliar imagen" position="top">
+            <Tooltip content="Ampliar imagen" position="top" style={{ margin: 'auto', width: '100%' }}>
               <button
                 type="button"
                 className={styles.calendarSlider}

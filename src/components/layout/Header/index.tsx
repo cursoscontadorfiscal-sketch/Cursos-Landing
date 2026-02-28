@@ -52,23 +52,24 @@ export const Header: FC<HeaderProps> = ({
             />
           </a>
 
-          {/* Desktop Navigation */}
-          <nav className={styles.nav}>
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                variant="nav"
-                size="md"
-                className={styles.navLink}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* Right Actions */}
+          {/* Right Actions: nav + theme + mobile */}
           <div className={styles.actions}>
+            <nav className={styles.nav}>
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  variant="nav"
+                  size="md"
+                  className={styles.navLink}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            <div className={styles.divider} aria-hidden="true" />
+
             <ThemeToggle />
 
             {/* Mobile Menu Button */}

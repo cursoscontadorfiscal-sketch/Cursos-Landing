@@ -1,9 +1,16 @@
 'use client';
 
 import { FC } from "react";
-import { Hourglass } from "lucide-react";
+import { Check } from "lucide-react";
 import type { OfferSectionProps } from "./types";
 import styles from "./styles.module.css";
+
+const VALUE_ITEMS = [
+  "8 clases en vivo por mes",
+  "Grabaciones disponibles 24/7",
+  "Comunidad VIP de contadores",
+  "Actualizaciones fiscales constantes",
+] as const;
 
 export const OfferSection: FC<OfferSectionProps> = ({
   offerTitle,
@@ -16,7 +23,7 @@ export const OfferSection: FC<OfferSectionProps> = ({
 }) => {
   const handleCtaClick = () => {
     window.open(
-      "https://pay.hotmart.com/L103962942X?off=9fzpxux4&checkoutMode=6&bid=1769812725142",
+      "https://pay.hotmart.com/L103962942X?off=g1xs9jwb&bid=1772239448007",
       "_blank",
       "noopener,noreferrer"
     );
@@ -26,7 +33,11 @@ export const OfferSection: FC<OfferSectionProps> = ({
     <section className={`${styles.section} ${className}`}>
       <div className={styles.container}>
         <div className={styles.card}>
-          {/* Urgency Badge */}
+
+          {/* Decorative dot grid inside card */}
+          <div className={styles.cardDots} aria-hidden="true" />
+
+          {/* Urgency badge */}
           <div className={styles.badgeWrapper}>
             <div className={styles.badge}>
               <span className={styles.pingDot}>
@@ -37,39 +48,43 @@ export const OfferSection: FC<OfferSectionProps> = ({
             </div>
           </div>
 
-          {/* Content */}
+          {/* Two-column content */}
           <div className={styles.content}>
-            {/* Hourglass Icon */}
-            <div className={styles.iconWrapper}>
-              <div className={styles.iconCircle}>
-                <Hourglass
-                  className={styles.hourglassIcon}
-                  width={50}
-                  height={50}
-                  strokeWidth={2}
-                />
+
+            {/* Left: title + value list */}
+            <div className={styles.left}>
+              <h2 className={styles.title}>{offerTitle}</h2>
+              <ul className={styles.valueList}>
+                {VALUE_ITEMS.map((item) => (
+                  <li key={item} className={styles.valueItem}>
+                    <span className={styles.checkIcon}>
+                      <Check size={11} strokeWidth={3} />
+                    </span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <p className={styles.institution}>Colegio de Contadores Valle Dorado</p>
+            </div>
+
+            {/* Right: price + CTA */}
+            <div className={styles.right}>
+              <div className={styles.priceBlock}>
+                <span className={styles.supportingText}>{supportingText}</span>
+                <h3 className={styles.subtitle}>{offerSubtitle}</h3>
+              </div>
+              <div className={styles.ctaWrapper}>
+                <button
+                  type="button"
+                  className={styles.ctaButton}
+                  onClick={handleCtaClick}
+                >
+                  {ctaText}
+                </button>
+                <p className={styles.smallText}>{smallSupportingText}</p>
               </div>
             </div>
 
-            {/* Text Content */}
-            <div className={styles.textContent}>
-              <h2 className={styles.title}>{offerTitle}</h2>
-              <h3 className={styles.subtitle}>{offerSubtitle}</h3>
-              <h4 className={styles.supportingText}>{supportingText}</h4>
-            </div>
-
-            {/* CTA */}
-            <div className={styles.ctaWrapper}>
-              <button
-                type="button"
-                className={styles.ctaButton}
-                onClick={handleCtaClick}
-              >
-                {ctaText}
-              </button>
-              <p className={styles.smallText}>{smallSupportingText}</p>
-              <p className={styles.smallText} style={{ margin: '.5rem 0' }}>Colegio de Contadores Valle Dorado</p>
-            </div>
           </div>
         </div>
       </div>

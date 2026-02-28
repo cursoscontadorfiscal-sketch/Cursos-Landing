@@ -18,8 +18,14 @@
 
 .grid {
   display: grid;
-  gap: 4rem;
+  gap: 2.5rem;
   align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    gap: 4rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -235,8 +241,16 @@
 
 .calendarImage {
   width: 100%;
-  height: auto;
+  height: 480px;
+  object-fit: cover;
+  object-position: top;
   display: block;
+}
+
+@media (max-width: 767px) {
+  .calendarImage {
+    height: 480px;
+  }
 }
 
 .sliderDots {

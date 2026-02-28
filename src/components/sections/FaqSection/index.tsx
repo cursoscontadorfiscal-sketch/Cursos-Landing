@@ -20,8 +20,8 @@ export const FaqSection: FC<FaqSectionProps> = ({
 
         {/* Accordion List */}
         <div className={styles.accordionList}>
-          {items.map((item) => (
-            <Accordion key={item.question} title={item.question}>
+          {items.map((item, index) => (
+            <Accordion key={item.question} title={item.question} defaultOpen={index === 1}>
               <div className={styles.accordionContent}>
                 {item.answerPart1 && <p>{item.answerPart1}</p>}
                 {item.answerPart2 && <p>{item.answerPart2}</p>}

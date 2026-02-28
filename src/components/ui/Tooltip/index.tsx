@@ -10,6 +10,7 @@ export function Tooltip({
   position = 'top',
   delay = 200,
   className = '',
+  style,
   disabled = false,
   fullSize = false,
 }: TooltipProps) {
@@ -48,6 +49,7 @@ export function Tooltip({
   return (
     <span
       className={containerClasses}
+      style={style}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       onFocus={handleMouseEnter}
